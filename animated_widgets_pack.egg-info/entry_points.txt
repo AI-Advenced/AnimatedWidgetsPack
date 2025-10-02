@@ -1,0 +1,2 @@
+[console_scripts]
+animated-widgets-demo = animated_widgets_pack.examples.demo:main

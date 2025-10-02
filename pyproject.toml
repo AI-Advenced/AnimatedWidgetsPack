@@ -1,0 +1,95 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "animated-widgets-pack"
+version = "1.0.0"
+description = "Animated GUI widgets library for Python"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "AnimatedWidgetsPack Team", email = "team@animatedwidgetspack.com"}
+]
+maintainers = [
+    {name = "AnimatedWidgetsPack Team", email = "team@animatedwidgetspack.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["gui", "widgets", "animation", "tkinter", "pyqt5", "pyqt6", "ui"]
+dependencies = [
+    "typing-extensions>=4.0.0",
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+gui = ["PyQt5>=5.15.0", "PyQt6>=6.0.0"]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.812",
+]
+docs = [
+    "sphinx>=4.0",
+    "sphinx-rtd-theme>=0.5",
+    "myst-parser>=0.15",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/animated-widgets-pack"
+Documentation = "https://animated-widgets-pack.readthedocs.io/"
+Repository = "https://github.com/yourusername/animated-widgets-pack.git"
+"Bug Tracker" = "https://github.com/yourusername/animated-widgets-pack/issues"
+
+[project.scripts]
+animated-widgets-demo = "animated_widgets_pack.examples.demo:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]

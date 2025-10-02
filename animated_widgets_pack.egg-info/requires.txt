@@ -1,0 +1,17 @@
+typing-extensions>=4.0.0
+
+[dev]
+pytest>=6.0
+pytest-cov>=2.0
+black>=21.0
+flake8>=3.8
+mypy>=0.812
+
+[docs]
+sphinx>=4.0
+sphinx-rtd-theme>=0.5
+myst-parser>=0.15
+
+[gui]
+PyQt5>=5.15.0
+PyQt6>=6.0.0
