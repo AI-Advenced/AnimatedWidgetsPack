@@ -4,6 +4,9 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](#testing)
 
+<img width="894" height="724" alt="image" src="https://github.com/user-attachments/assets/1f01ab2c-9f72-4cb9-8586-f2fdd3fe8aa7" />
+
+
 A modern Python library for creating animated GUI widgets with smooth transitions and interactive effects, compatible with Tkinter, PyQt5/PyQt6 and other GUI frameworks.
 
 ## ✨ Features
